@@ -17,7 +17,11 @@ namespace Business.Concrete
         }
         public List<Car> GetAll()
         {
+            Console.WriteLine("Araçlar Listelendi");
+
             return _carDal.GetAll();
+
+            
         }
     }
 }
