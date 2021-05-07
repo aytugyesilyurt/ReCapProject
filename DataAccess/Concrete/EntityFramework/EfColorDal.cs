@@ -15,9 +15,10 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (ReCapDbContext context = new ReCapDbContext())
             {
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
+                    var addedEntity = context.Entry(entity);
+                    addedEntity.State = EntityState.Added;
+                    context.SaveChanges();
+                
             }
         }
 
