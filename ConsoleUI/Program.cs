@@ -24,7 +24,7 @@ namespace ConsoleUI
 
             Car car1 = new Car() {CarId=1, ColorId = 1, BrandId = 1, DailyPrice = 1500, ModelYear = 1996, Name = "COROLLA", Description = "Sahibinden temiz satılık 1.6 kaçmaz" };
 
-            carManager.Update(car1);
+            //carManager.Add(car1);
 
             carManager.GetAll();
 
