@@ -14,24 +14,23 @@ namespace ConsoleUI
             ColorManager colorManager = new ColorManager(new EfColorDal());
             BrandManager brandManager = new BrandManager(new EfBrandDal());
 
-            Brand brand1 = new Brand() { BrandId = 1, BrandName = "TOYOTA" };
-            Color color1 = new Color() { ColorId = 1, ColorName = "BEYAZ" };
-            Color color2 = new Color() { ColorId = 2, ColorName = "SİYAH" };
-            Color colorBrwn = new Color() { ColorId = 3, ColorName = "KAHVERENGİ" };
-            //colorManager.Add(colorBrwn);
-            //brandManager.Update(brand1);
+            //Brand brand1 = new Brand() { BrandId = 1, BrandName = "TOYOTA" };
+            //Color color1 = new Color() { ColorId = 1, ColorName = "BEYAZ" };
+            //Color color2 = new Color() { ColorId = 2, ColorName = "SİYAH" };
+            //Color colorBrwn = new Color() { ColorId = 3, ColorName = "KAHVERENGİ" };
+            //colorManager.Add(color1);
+            //brandManager.Add(brand1);
 
 
-            Car car1 = new Car() {CarId=1, ColorId = 1, BrandId = 1, DailyPrice = 1500, ModelYear = 1996, Name = "COROLLA", Description = "Sahibinden temiz satılık 1.6 kaçmaz" };
+            //Car car1 = new Car() {CarId=1, ColorId = 1, BrandId = 1, DailyPrice = 1500, ModelYear = 1996, CarName = "COROLLA", Description = "Sahibinden temiz satılık 1.6 kaçmaz" };
 
-            //carManager.Add(car1);
+            ////carManager.Add(car1);
 
-            carManager.GetAll();
-
-            foreach (var car in carManager.GetAll())
+            //carManager.GetAll();
+            
+            foreach (var car in carManager.GetCarDetails())
             {
-
-                Console.WriteLine("Araç kodu: "+car.CarId +" // Marka kodu: "+car.BrandId+" // Model yılı: "+car.ModelYear + " // Fiyatı: " + car.DailyPrice + " // Ürün Açıklaması: " + car.Description);
+                Console.WriteLine("Araç kodu: " + car.CarId + " // Marka Adı: " + car.BrandName + " // Model rengi: " + car.ColorName + " // Fiyatı: " + car.DailyPrice + " // Ürün Adı: " + car.CarName);
             }
 
             Console.ReadLine();
