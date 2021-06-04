@@ -5,9 +5,10 @@ using System.Text;
 
 namespace Entities.Concrete.Persons
 {
-    public class Customer:User,IPerson
+    public class Customer:IEntity
     {
         public int CustomerId { get; set; }
+        public int UserId { get; set; }
         public string CompanyName { get; set; }
 
     }

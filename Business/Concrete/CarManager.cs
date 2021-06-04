@@ -22,7 +22,7 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if (car.CarName.Length>=2 && car.DailyPrice>0)
+            if (car.CarName.Length >= 2 && car.DailyPrice > 0)
             {
                 _carDal.Add(car);
                 return new SuccessResult(CarMessages.CarAdded);
@@ -49,12 +49,12 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p=>p.BrandId ==id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id));
         }
 
         public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id));
         }
 
         public IResult Update(Car car)
