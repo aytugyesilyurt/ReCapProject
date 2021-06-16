@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Aspects\Autofac\" />
+    <Folder Include="CrossCuttingConcerns\" />
   </ItemGroup>
 
 </Project>

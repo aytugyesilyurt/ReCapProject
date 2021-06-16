@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
 using Business.Constants.Messages;
+using Business.ValidationRules.FluentValidation;
 using Core.Utilities.Results.BaseResults;
 using Core.Utilities.Results.DataResults;
 using DataAccess.Abstract;
@@ -20,6 +21,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             if (car.CarName.Length >= 2 && car.DailyPrice > 0)
